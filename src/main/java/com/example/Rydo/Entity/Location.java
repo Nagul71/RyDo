@@ -11,7 +11,7 @@ public class Location {
     @Id
     @Column(name = "loca_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int locaId;
+    private Integer locaId;
 
     @Column(name = "Names")
     private String names;
@@ -22,11 +22,11 @@ public class Location {
     // Getters and Setters
 
 
-    public int getLocaId() {
+    public Integer getLocaId() {
         return locaId;
     }
 
-    public void setLocaId(int locaId) {
+    public void setLocaId(Integer locaId) {
         this.locaId = locaId;
     }
 

@@ -9,9 +9,9 @@ public class Bookings {
     @Id
     @Column(name = "book_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int bookId;
+    private Integer bookId;
     private String status;
-    private double total;
+    private Double total;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -34,11 +34,11 @@ public class Bookings {
     // Getters and Setters
 
 
-    public int getBookId() {
+    public Integer getBookId() {
         return bookId;
     }
 
-    public void setBookId(int bookId) {
+    public void setBookId(Integer bookId) {
         this.bookId = bookId;
     }
 
@@ -50,11 +50,11 @@ public class Bookings {
         this.status = status;
     }
 
-    public double getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 

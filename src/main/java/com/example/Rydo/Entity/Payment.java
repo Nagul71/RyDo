@@ -9,10 +9,10 @@ public class Payment {
     @Id
     @Column(name = "payment_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int paymentId;
+    private Integer paymentId;
 
     @Column(name = "amount_paid")
-    private double amountPaid;
+    private Double amountPaid;
     private String status;
 
 
@@ -23,19 +23,19 @@ public class Payment {
     // Getters and Setters
 
 
-    public int getPaymentId() {
+    public Integer getPaymentId() {
         return paymentId;
     }
 
-    public void setPaymentId(int paymentId) {
+    public void setPaymentId(Integer paymentId) {
         this.paymentId = paymentId;
     }
 
-    public double getAmountPaid() {
+    public Double getAmountPaid() {
         return amountPaid;
     }
 
-    public void setAmountPaid(double amountPaid) {
+    public void setAmountPaid(Double amountPaid) {
         this.amountPaid = amountPaid;
     }
 

@@ -10,9 +10,9 @@ public class Rate {
     @Id
     @Column(name = "rate_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int rateId;
+    private Integer rateId;
 
-    private double amount;
+    private Double amount;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "source_id")
@@ -28,19 +28,19 @@ public class Rate {
     // Getters and Setters
 
 
-    public int getRateId() {
+    public Integer getRateId() {
         return rateId;
     }
 
-    public void setRateId(int rateId) {
+    public void setRateId(Integer rateId) {
         this.rateId = rateId;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 

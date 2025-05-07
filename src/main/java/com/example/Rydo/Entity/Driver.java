@@ -11,7 +11,7 @@ public class Driver {
     @Id
     @Column(name = "driver_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int driverId;
+    private Integer driverId;
 
     private String name;
     private String password;
@@ -33,11 +33,11 @@ public class Driver {
     // Getters and Setters
 
 
-    public int getDriverId() {
+    public Integer getDriverId() {
         return driverId;
     }
 
-    public void setDriverId(int driverId) {
+    public void setDriverId(Integer driverId) {
         this.driverId = driverId;
     }
 
