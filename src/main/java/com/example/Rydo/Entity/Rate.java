@@ -25,13 +25,6 @@ public class Rate {
     @OneToMany(mappedBy = "rate", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Bookings> bookings;
 
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "location_id") // foreign key column in Rate table
-    private Location location;
-
-
-
     // Getters and Setters
 
 

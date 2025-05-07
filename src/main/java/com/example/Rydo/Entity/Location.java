@@ -17,14 +17,7 @@ public class Location {
     private String names;
 
     @OneToMany(mappedBy = "location")
-    private Driver driver;
-
-
-    @OneToMany(mappedBy = "location", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Rate> rates;
-
-
-
+    private List<Driver> drivers;
 
     // Getters and Setters
 
@@ -45,11 +38,11 @@ public class Location {
         this.names = names;
     }
 
-    public Driver getDriver() {
-        return driver;
+    public List<Driver> getDriver() {
+        return drivers;
     }
 
-    public void setDriver(Driver driver) {
-        this.driver = driver;
+    public void setDriver(List<Driver> drivers) {
+        this.drivers = drivers;
     }
 }
