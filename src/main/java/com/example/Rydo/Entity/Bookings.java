@@ -7,10 +7,12 @@ import jakarta.persistence.*;
 public class Bookings {
 
     @Id
-    @Column(name = "book_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "book_id")
     private Integer bookId;
+
     private String status;
+
     private Double total;
 
     @ManyToOne
