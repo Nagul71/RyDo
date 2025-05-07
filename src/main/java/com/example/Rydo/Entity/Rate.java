@@ -25,6 +25,11 @@ public class Rate {
     @OneToMany(mappedBy = "rate", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Bookings> bookings;
 
+
+    @ManyToMany(mappedBy = "rates")
+    private List<Location> locations;
+
+
     // Getters and Setters
 
 

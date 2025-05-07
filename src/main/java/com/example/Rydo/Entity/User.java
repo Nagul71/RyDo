@@ -9,14 +9,11 @@ public class User {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int userId;
-
     private String name;
-
     private String password;
-
     private String email;
-
     private String phone;
 
     // Relationships
@@ -24,8 +21,6 @@ public class User {
     private List<Bookings> bookings;
 
     // Getters and Setters
-
-
     public int getUserId() {
         return userId;
     }

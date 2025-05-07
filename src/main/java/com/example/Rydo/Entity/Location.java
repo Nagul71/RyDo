@@ -2,6 +2,8 @@ package com.example.Rydo.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "LOCATION")
 public class Location {
@@ -14,8 +16,18 @@ public class Location {
     @Column(name = "Names")
     private String names;
 
-    @OneToOne(mappedBy = "location")
+    @OneToMany(mappedBy = "location")
     private Driver driver;
+
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "location_rate", // join table name
+            joinColumns = @JoinColumn(name = "location_id"), // FK to Location
+            inverseJoinColumns = @JoinColumn(name = "rate_id") // FK to Rate
+    )
+    private List<Rate> rates;
+
 
 
     // Getters and Setters
