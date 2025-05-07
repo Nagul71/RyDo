@@ -10,7 +10,7 @@ public class User {
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int userId;
+    private Integer userId;
     private String name;
     private String password;
     private String email;
@@ -21,11 +21,11 @@ public class User {
     private List<Bookings> bookings;
 
     // Getters and Setters
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
