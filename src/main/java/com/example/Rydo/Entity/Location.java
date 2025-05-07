@@ -20,13 +20,9 @@ public class Location {
     private Driver driver;
 
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "location_rate", // join table name
-            joinColumns = @JoinColumn(name = "location_id"), // FK to Location
-            inverseJoinColumns = @JoinColumn(name = "rate_id") // FK to Rate
-    )
+    @OneToMany(mappedBy = "location", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Rate> rates;
+
 
 
 

@@ -26,8 +26,10 @@ public class Rate {
     private List<Bookings> bookings;
 
 
-    @ManyToMany(mappedBy = "rates")
-    private List<Location> locations;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "location_id") // foreign key column in Rate table
+    private Location location;
+
 
 
     // Getters and Setters
