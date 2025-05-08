@@ -1,4 +1,4 @@
 package com.example.Rydo.Repository;
 
-public class AuthRepository {
+public class AuthRepository  {
 }
