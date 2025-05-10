@@ -20,14 +20,12 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/login")
-    public ResponseEntity<UserLoginDTO> LoginUser(@RequestBody UserLoginDTO Details) {
-        UserLoginDTO user = authService.LoginUser(Details);
-        return ResponseEntity.ok(user);
+    public ResponseEntity<?> LoginUser(@RequestBody UserLoginDTO details) {
+        return authService.LoginUser(details);
     }
-    
+
     @PostMapping("/register")
-    public ResponseEntity<UserRegisterDTO> CreateUser(@RequestBody UserRegisterDTO Details) {
-        UserRegisterDTO user = authService.Register(Details);
-        return ResponseEntity.ok(user);
+    public ResponseEntity<?> CreateUser(@RequestBody UserRegisterDTO details) {
+        return authService.CreateUser(details);
     }
 }
